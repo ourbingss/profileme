@@ -1,30 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
 * {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
     background: linear-gradient(to right, #fdf5f6, #f2d6dc);
 }
-
 nav {
     width: 100%;
     height: 10vh;
     position: relative;
     z-index: 9999;
 }
-
 .nav-container {
     width: 100%;
     height: 100%;
@@ -34,35 +29,20 @@ nav {
     position: relative;
     z-index: 10000;
 }
-
 .logo {
     color: #2d080a;
     font-size: 2rem;
     font-weight: bolder;
 }
-
 .logo span {
     color: #800e13;
     text-shadow: 0 0 10px rgba(128, 14, 19, 0.3);
 }
-
-.hamburg,
-.cancel {
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    color: #2d080a;
-    font-size: 2rem;
-    display: none;
-}
-
 .nav-container .links {
     display: flex;
     gap: 3rem;
     align-items: center;
 }
-
 .nav-container .links a {
     position: relative;
     font-size: 1.2rem;
@@ -71,7 +51,6 @@ nav {
     font-weight: 500;
     transition: 0.3s linear;
 }
-
 .nav-container .links a::before {
     position: absolute;
     content: "";
@@ -82,11 +61,12 @@ nav {
     background-color: #800e13;
     transition: 0.2s linear;
 }
-
 .nav-container .links a:hover::before {
     width: 100%;
 }
-
+.nav-container .links a:hover {
+    color: #800e13;
+}
 .nav-container .contact-btn {
     background-color: transparent;
     padding: 5px 20px;
@@ -94,20 +74,26 @@ nav {
     border: 2px solid #800e13;
     transition: 0.2s linear;
 }
-
 .nav-container .contact-btn a {
     color: #800e13;
     transition: 0.3s linear;
 }
-
 .nav-container .contact-btn:hover,
 .nav-container .contact-btn:hover a {
     background-color: #800e13;
     color: white;
 }
 
-.nav-container .links a:hover {
-    color: #800e13;
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #2d080a;
+    font-size: 2rem;
+    display: none;
 }
 
 .dropdown {
@@ -122,7 +108,6 @@ nav {
     box-shadow: 0 0 20px rgba(45, 8, 10, 0.4);
     transition: 0.2s linear;
 }
-
 .dropdown .links a {
     color: white;
     display: flex;
@@ -132,19 +117,18 @@ nav {
     align-items: center;
     transition: 0.2s linear;
 }
-
 .dropdown .links a:hover {
     background-color: #800e13;
 }
 
 section {
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
 }
-
 .main-container {
     width: 100%;
     height: 100%;
+    min-height: 90vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -156,7 +140,6 @@ section {
     position: relative;
     z-index: 1;
 }
-
 .main-container .image img {
     width: 100%;
     height: auto;
@@ -171,21 +154,19 @@ section {
     width: 40%;
     min-height: 100px;
 }
-
 .content h1 {
     font-size: clamp(1rem, 2rem + 5vw, 3rem);
 }
-
 .content h1 span {
     color: #800e13;
     text-shadow: 0 0 10px rgba(128, 14, 19, 0.3);
 }
 
+
 .content .typewriter {
     font-weight: 600;
     font-size: clamp(1rem, 1rem + 5vw, 2rem);
 }
-
 .content .typewriter span {
     color: #800e13;
     font-size: 2.5rem;
@@ -193,12 +174,10 @@ section {
     position: relative;
     transition: 0.3s linear;
 }
-
 .typewriter span::before {
     content: "Developer";
     animation: words 15s infinite;
 }
-
 .typewriter span::after {
     content: "";
     position: absolute;
@@ -215,21 +194,26 @@ section {
 }
 
 @keyframes words {
-    0%, 33% {
+    0%,
+    33% {
         content: "Programmer";
     }
 
-    34%, 66% {
+    34%,
+    66% {
         content: "Gamers";
     }
 
-    67%, 100% {
+    67%,
+    100% {
         content: "Prettier";
     }
 }
 
+
 .content .quotes {
-   font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
     margin: 10px 0;
     color: #663d43;
     line-height: 1.8;
@@ -269,6 +253,7 @@ section {
     font-weight: 700;
     border-radius: 5px;
     transition: 0.2s linear;
+    cursor: pointer;
 }
 
 .content button:hover {
@@ -280,67 +265,13 @@ section {
     box-shadow: 0 0 30px rgba(128, 14, 19, 0.4);
 }
 
-@media (max-width: 884px) {
+/* =========================================
+   GENERAL SECTION STYLE
+========================================= */
 
-    body {
-        overflow-y: visible;
-    }
-
-    nav .logo {
-        position: absolute;
-        top: 16px;
-        left: 15px;
-        font-size: 1.5rem;
-    }
-
-    .main-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav-container .links {
-        display: none;
-    }
-
-    .hamburg,
-    .cancel {
-        display: block;
-    }
-
-    .main-container .image {
-        width: 70%;
-        max-width: 300px;
-        margin-bottom: 20px;
-        z-index: 0;
-    }
-
-    .main-container .image img {
-        width: 100%;
-        height: auto;
-    }
-
-    .main-container .content {
-        width: 80%;
-    }
-
-    .social-links i {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
-    }
-
-    .cancel {
-        color: white;
-    }
-}
-
-/* ========================================= */
-/* CSS TAMBAHAN UNTUK SECTION BARU           */
-/* ========================================= */
-
-.about-section, 
-.skills-section, 
-.projects-section, 
+.about-section,
+.skills-section,
+.projects-section,
 .contact-section {
     height: auto;
     min-height: 100vh;
@@ -360,6 +291,8 @@ section {
     justify-content: center;
 }
 
+/* Section Heading */
+
 h2 {
     font-size: clamp(2rem, 2rem + 3vw, 3rem);
     color: #2d080a;
@@ -372,7 +305,10 @@ h2 span {
     text-shadow: 0 0 10px rgba(128, 14, 19, 0.2);
 }
 
-/* --- ABOUT SECTION --- */
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
 .about-wrapper {
     display: flex;
     align-items: center;
@@ -426,74 +362,25 @@ h2 span {
     line-height: 1.8;
 }
 
-/* --- SKILLS SECTION --- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    max-width: 1000px;
-}
-
-.skill-card {
-    background: rgba(255, 255, 255, 0.5);
-    border: 2px solid rgba(128, 14, 19, 0.2);
-    border-radius: 15px;
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-    transition: 0.3s ease;
-    backdrop-filter: blur(5px);
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-    background: #800e13;
-    border-color: #800e13;
-    box-shadow: 0 10px 20px rgba(128, 14, 19, 0.3);
-}
-
-.skill-card i {
-    font-size: 3.5rem;
-    color: #800e13;
-    margin-bottom: 1rem;
-    transition: 0.3s ease;
-}
-
-.skill-card h3 {
-    font-size: 1.3rem;
-    color: #2d080a;
-    margin-bottom: 0.5rem;
-    transition: 0.3s ease;
-}
-
-.skill-card p {
-    color: #663d43;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
-}
-
-.skill-card:hover i, 
-.skill-card:hover h3, 
-.skill-card:hover p {
-    color: white;
-}
-
-/* --- PROJECTS SECTION --- */
+/* =========================================
+   PROJECTS SECTION (Diperkecil)
+========================================= */
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    /* Mengubah ukuran minimal card dari 300px jadi 240px agar lebih banyak & kompak */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem; /* Jarak antar card diperkecil sedikit */
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px; /* Lebar maksimal container dikurangi */
 }
 
 .project-card {
     background: rgba(255, 255, 255, 0.5);
     border: 2px solid rgba(128, 14, 19, 0.2);
-    border-radius: 15px;
+    border-radius: 12px; /* Sudut sedikit lebih melengkung proporsional */
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -501,29 +388,29 @@ h2 span {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     background: #800e13;
     border-color: #800e13;
-    box-shadow: 0 10px 20px rgba(128, 14, 19, 0.3);
+    box-shadow: 0 8px 16px rgba(128, 14, 19, 0.3);
 }
 
 .project-card img {
     width: 100%;
-    height: 220px;
+    height: 160px; /* Tinggi gambar diperkecil dari 220px ke 160px */
     object-fit: cover;
 }
 
 .project-card h3 {
     color: #2d080a;
-    margin: 1.5rem 1.5rem 0.5rem;
-    font-size: 1.3rem;
+    margin: 1rem 1rem 0.3rem; /* Margin diperkecil */
+    font-size: 1.1rem; /* Ukuran font judul diperkecil */
     transition: 0.3s ease;
 }
 
 .project-card p {
     color: #663d43;
-    margin: 0 1.5rem 1.5rem;
-    font-size: 0.95rem;
+    margin: 0 1rem 1rem; /* Margin diperkecil */
+    font-size: 0.85rem; /* Ukuran font deskripsi diperkecil */
     flex-grow: 1;
     transition: 0.3s ease;
 }
@@ -533,15 +420,18 @@ h2 span {
     color: white;
 }
 
+/* Project Button */
+
 .project-btn {
     display: block;
     text-align: center;
     background: #800e13;
     color: white;
     text-decoration: none;
-    padding: 12px;
-    margin: 0 1.5rem 1.5rem;
+    padding: 8px 12px; /* Padding tombol diperkecil */
+    margin: 0 1rem 1rem;
     border-radius: 5px;
+    font-size: 0.9rem;
     font-weight: 600;
     transition: 0.3s ease;
     border: 2px solid transparent;
@@ -553,7 +443,10 @@ h2 span {
     border-color: white;
 }
 
-/* --- CONTACT SECTION --- */
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
 .contact-form {
     max-width: 700px;
     width: 100%;
@@ -565,7 +458,7 @@ h2 span {
     flex-wrap: wrap;
 }
 
-.contact-form .input-box input, 
+.contact-form .input-box input,
 .contact-form textarea {
     width: 100%;
     padding: 1rem;
@@ -584,7 +477,7 @@ h2 span {
     width: 48%;
 }
 
-.contact-form .input-box input:focus, 
+.contact-form .input-box input:focus,
 .contact-form textarea:focus {
     border-color: #800e13;
     background: white;
@@ -593,6 +486,8 @@ h2 span {
 .contact-form textarea {
     resize: none;
 }
+
+/* Contact Submit Button */
 
 .contact-form .btn {
     width: 100%;
@@ -613,212 +508,378 @@ h2 span {
     box-shadow: 0 0 20px rgba(128, 14, 19, 0.4);
 }
 
-/* --- RESPONSIVE UNTUK SECTION BARU --- */
+/* =========================================
+   MUSIC CARD PLAYER
+========================================= */
+
+.music-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.2rem;
+    border-radius: 24px;
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Music Cover */
+
+.music-cover {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+}
+
+.music-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* Music Info */
+
+.music-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.song-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.song-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.singer-name {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin: 2px 0 0;
+}
+
+/* Heart */
+
+.heart-icon {
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.heart-icon.active {
+    color: #ff4757;
+}
+
+/* Progress */
+
+.progress-box input[type="range"] {
+    width: 100%;
+    accent-color: #ffffff;
+    cursor: pointer;
+    height: 4px;
+}
+
+/* Player Controls */
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+}
+
+.control-btn {
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.control-btn:hover {
+    opacity: 1;
+}
+
+/* Play Button */
+
+.play-btn-wrapper {
+    width: 36px;
+    height: 36px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.play-btn-wrapper i {
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   SOUND WAVE
+========================================= */
+
+.sound-wave {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 24px;
+    gap: 2px;
+}
+
+.sound-wave span {
+    width: 3px;
+    height: 20%;
+    background: #800e13;
+    border-radius: 3px;
+    transition: height 0.2s ease;
+}
+
+.sound-wave.playing span {
+    animation: wave 1.2s infinite ease-in-out alternate;
+}
+
+.sound-wave.playing span:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+.sound-wave.playing span:nth-child(3n) {
+    animation-delay: 0.4s;
+}
+
+@keyframes wave {
+    0% {
+        height: 15%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
 @media (max-width: 884px) {
-    .contact-form .input-box input {
+
+    body {
+        overflow-y: visible;
+    }
+
+    /* Navbar */
+
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg,
+    .cancel {
+        display: block;
+    }
+
+    /* Main */
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container .image {
+        width: 70%;
+        max-width: 300px;
+        margin-bottom: 20px;
+        z-index: 0;
+    }
+
+    .main-container .image img {
         width: 100%;
+        height: auto;
     }
-    
-    .about-section, 
-    .skills-section, 
-    .projects-section, 
-    .contact-section {
-        padding: 4rem 5%;
+
+    .main-container .content {
+        width: 80%;
     }
+
+    /* Social */
+
+    .social-links i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    /* Mobile Sections */
+
+.about-section,
+.skills-section,
+.projects-section,
+.contact-section {
+    min-height: auto;
+    height: auto;
+    padding: 3.5rem 5%;
+}
+
+    /* About */
 
     .about-wrapper {
         flex-direction: column;
         gap: 2rem;
     }
-    
-    .about-media, 
+
+    .about-media,
     .about-content {
         width: 100%;
     }
-    
+
     .about-content {
         text-align: center;
     }
-    
+
     .about-content h2 {
         text-align: center;
     }
+
+    /* Contact */
+
+    .contact-form .input-box input {
+        width: 100%;
+    }
+
+    /* Cancel Button */
+
+    .cancel {
+        color: white;
+    }
 }
 
-/* Styling Music Card Player */
-.music-card {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.2rem;
-  border-radius: 24px;
-  max-width: 520px;
-  margin: 1.5rem auto 0 auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.music-cover {
-  width: 140px;
-  height: 140px;
-  flex-shrink: 0;
-}
-
-.music-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-.music-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.song-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.song-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.singer-name {
-  font-size: 0.85rem;
-  opacity: 0.7;
-  margin: 2px 0 0 0;
-}
-
-.heart-icon {
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.heart-icon.active {
-  color: #ff4757;
-}
-
-.progress-box input[type="range"] {
-  width: 100%;
-  accent-color: #ffffff;
-  cursor: pointer;
-  height: 4px;
-}
-
-.player-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.2rem 0;
-}
-
-.control-btn {
-  font-size: 1rem;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
-.control-btn:hover {
-  opacity: 1;
-}
-
-.play-btn-wrapper {
-  width: 36px;
-  height: 36px;
-  background: #ffffff;
-  color: #000000;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.play-btn-wrapper i {
-  font-size: 0.9rem;
-}
-
-.sound-wave {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 24px;
-  gap: 2px;
-}
-
-.sound-wave span {
-  width: 3px;
-  height: 20%;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 3px;
-  transition: height 0.2s ease;
-}
-
-.sound-wave.playing span {
-  animation: wave 1.2s infinite ease-in-out alternate;
-}
-
-.sound-wave.playing span:nth-child(even) {
-  animation-delay: 0.2s;
-}
-
-.sound-wave.playing span:nth-child(3n) {
-  animation-delay: 0.4s;
-}
-
-@keyframes wave {
-  0% { height: 15%; }
-  100% { height: 100%; }
-}
+/* =========================================
+   MUSIC CARD - MOBILE
+========================================= */
 
 @media (max-width: 480px) {
-  .music-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  .music-cover {
+
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+        padding: 4rem 5%;
+    }
+    .music-card {
+        width: 90%;
+        max-width: 380px;
+        min-height: 120px;
+        padding: 0.8rem;
+        gap: 0.9rem;
+        flex-direction: row;
+        text-align: left;
+        margin: 1.2rem auto 0;
+        border-radius: 18px;
+    }
+
+    .music-cover {
+        width: 90px;
+        height: 90px;
+        flex-shrink: 0;
+    }
+
+    .music-cover img {
+        border-radius: 12px;
+    }
+
+    .music-info {
+        min-width: 0;
+        gap: 0.4rem;
+    }
+
+    .song-header {
+        align-items: center;
+    }
+
+    .song-title {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .singer-name {
+        font-size: 0.7rem;
+    }
+
+    .heart-icon {
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        margin-left: 5px;
+    }
+
+    .progress-box input[type="range"] {
+        height: 3px;
+    }
+
+    .player-controls {
+        padding: 0;
+    }
+
+    .control-btn {
+        font-size: 0.75rem;
+    }
+
+    .play-btn-wrapper {
+        width: 30px;
+        height: 30px;
+    }
+
+    .play-btn-wrapper i {
+        font-size: 0.75rem;
+    }
+
+    .sound-wave {
+        height: 18px;
+        gap: 1.5px;
+    }
+
+    .sound-wave span {
+        width: 2px;
+    }
+}
+/* =========================================
+   FOOTER SECTION
+========================================= */
+
+.footer {
     width: 100%;
-    height: 200px;
-  }
+    padding: 2rem 0;
+    text-align: center;
+    background: linear-gradient(to right, #fdf5f6, #f2d6dc);
+    margin-top: 3rem;
 }
 
-.like-notification {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #333;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: 0.3s ease;
-    z-index: 9999;
+.footer p {
+    color: #663d43;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-.like-notification.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-#likeButton.liked {
-    background: #ff6b81;
-    color: white;
-}
-
-#likeCount {
-    margin-top: 10px;
-    font-size: 14px;
+.footer span {
+    color: #800e13;
+    font-weight: 600;
 }

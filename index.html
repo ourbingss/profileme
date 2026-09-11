@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Ourbingss</title>
+    <link rel="icon" type="image/png" href="img/pp5.jpg"/>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
@@ -37,49 +37,34 @@
         </div>
       </div>
     </nav>
-
     <section>
       <div class="main-container">
         <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
           <img src="/img/pp5.jpg" alt="" />
         </div>
         <div class="content">
-          <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Andien</span></h1>
+          <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Bingss</span></h1>
           <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900"><span></span></div>
-          <p class = "quotes" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
-            "I'm learning that life doesn't have to make sense every day, sometimes it's enough to breathe, let go, and trust the process." - Bings
-          </p>
-          <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+          <p class="quotes" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">"I'm learning that life doesn't have to make sense every day, sometimes it's enough to breathe, let go, and trust the process." - Bings</p>
+          <div class="social-links" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
             <a href="https://github.com/ourbingss" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://open.spotify.com/user/ourbingss" target="_blank"><i class="fa-brands fa-spotify"></i></a>
             <a href="https://www.pinterest.com/ourbingss/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
             <a href="https://discord.com/users/ourbingss" target="_blank"><i class="fa-brands fa-discord"></i></a>
           </div>
-          <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-    <button id="likeButton">
-        <i class="fa-solid fa-heart"></i> Like Me
-    </button>
-
-    <p id="likeCount"></p>
-</div>
-
-<div id="likeNotification" class="like-notification">
-    Thanks XO, Bings! ♡
-</div>
         </div>
       </div>
     </section>
-
     <!-- SECTION ABOUT ME -->
     <section id="about" class="about-section">
       <div class="main-container">
         <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
           <h2>About <span>Me</span></h2>
-          <p>Hi, I'm Andien as know Bings. This page was created to get to know me, and if you're interested, click the like button to keep me motivated to keep coding. ♡</p>
+          <p>Hi, I'm Andien aslo known as Bings! This page was created so you can get to know me better. Feel free to explore my work or reach out if you'd like to connect—your support keeps me motivated to keep coding!</p>
           <!-- Custom Music Player -->
           <div class="music-card">
             <div class="music-cover">
-              <img src="img/pp4.jpeg" alt="Cover Art" />
+              <img src="img/pp2.jpeg" alt="Cover Art" />
             </div>
             <div class="music-info">
               <div class="song-header">
@@ -87,32 +72,30 @@
                   <h3 class="song-title">No One Else</h3>
                   <p class="singer-name">Chris Brown</p>
                 </div>
-                <i class="fa-solid fa-heart heart-icon" id="heart-btn"></i>
               </div>
 
-              <audio id="audio-player" src="audio/no-one-else.mpeg"></audio>
+              <audio id="audio-player" src="audio/audiome.mp3"></audio>
 
-             <div class="progress-box">
-  <input type="range" id="progress-bar" value="0" min="0" max="100" />
-  <!-- Tambahan teks waktu -->
-  <div class="time-display" style="display: flex; justify-content: space-between; font-size: 0.75rem; opacity: 0.8; margin-top: 4px;">
-    <span id="current-time">00:00</span>
-    <span id="max-time">01:30</span>
-  </div>
-</div>
+              <div class="progress-box">
+                <input type="range" id="progress-bar" value="0" min="0" max="100" />
+                <!-- Tambahan teks waktu -->
+                <div class="time-display" style="display: flex; justify-content: space-between; font-size: 0.75rem; opacity: 0.8; margin-top: 4px">
+                  <span id="current-time">00:00</span>
+                  <span id="max-time">01:30</span>
+                </div>
+              </div>
               <div class="player-controls">
                 <i class="fa-solid fa-shuffle control-btn"></i>
                 <i class="fa-solid fa-backward-step control-btn"></i>
                 <div class="play-btn-wrapper" id="play-btn">
-                <i class="fa-solid fa-play" id="play-icon"></i></div>
+                  <i class="fa-solid fa-play" id="play-icon"></i>
+                </div>
                 <i class="fa-solid fa-forward-step control-btn"></i>
                 <i class="fa-solid fa-repeat control-btn"></i>
               </div>
               <div class="sound-wave" id="sound-wave">
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span> <span></span><span></span><span></span><span></span><span></span> <span></span><span></span><span></span><span></span><span></span> <span></span><span></span
+                ><span></span><span></span><span></span>
               </div>
             </div>
           </div>
@@ -121,70 +104,31 @@
       </div>
     </section>
     <!-- projects section -->
-<section id="projects" class="projects-section">
-    <div class="main-container">
-
-        <h2 data-aos="fade-up" data-aos-duration="1000">
-            My <span>Little Projects</span>
-        </h2>
+    <section id="projects" class="projects-section">
+      <div class="main-container">
+        <h2 data-aos="fade-up" data-aos-duration="1000">My <span>Little Projects</span></h2>
         <div class="projects-grid">
-            <!-- MEDIKA APPS -->
-            <div class="project-card"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-                data-aos-delay="100">
-                <img src="/img/medika.png" alt="MedikaApps">
-                <h3>MedikaApps</h3>
-                <p>
-                    Aplikasi manajemen kesehatan berbasis web menggunakan
-                    framework Laravel 12 untuk mengelola berbagai kebutuhan
-                    informasi dan layanan kesehatan.
-                </p>
-                <a href="https://github.com/ourbingss/MedikaApps"
-                   target="_blank"
-                   class="project-btn">
-                    View Project
-                </a>
-            </div>
-            <div class="project-card"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-                data-aos-delay="200">
-                <img src="/img/iot tanaman.png" alt="Project Penyiraman">
-                <h3>Smart Garden IoT</h3>
-                <p>
-                    Sistem penyiraman tanaman herbal otomatis berbasis IoT
-                    menggunakan ESP32 dan dashboard monitoring real-time
-                    untuk memantau kondisi tanaman.
-                </p>
-                <a href="https://github.com/ourbingss/project-penyiraman"
-                   target="_blank"
-                   class="project-btn">
-                    View Project
-                </a>
-            </div>
-            <!-- PORTFOLIO -->
-            <div class="project-card"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-                data-aos-delay="300">
-                <img src="/img/portfolio.jpg" alt="Portfolio Website">
-                <h3>Personal Portfolio</h3>
-                <p>
-                    Website portfolio pribadi yang dibuat untuk memperkenalkan
-                    diri, menampilkan project, serta berbagi pengalaman dan
-                    perjalanan dalam dunia programming.
-                </p>
-                <a href="https://github.com/ourbingss/ourbingss"
-                   target="_blank"
-                   class="project-btn">
-                    View Project
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
+          <!-- MEDIKA APPS -->
+          <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+            <img src="/img/medika.jpg" alt="MedikaApps" />
+            <h3>MedikaApps</h3>
+            <p>Sistem manajemen kesehatan berbasis web menggunakan Laravel 12 untuk mengelola informasi dan layanan kesehatan.</p>
+            <a href="https://github.com/ourbingss/MedikaApps" target="_blank" class="project-btn"> View Project </a>
+          </div>
+          <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+            <img src="/img/garden.jpg" alt="Project Penyiraman" />
+            <h3>Smart Garden IoT</h3>
+            <p>Sistem penyiraman tanaman otomatis berbasis IoT menggunakan ESP32 dan dashboard monitoring real-time untuk memantau kondisi tanaman secara online.</p>
+            <a href="https://github.com/ourbingss/project-penyiraman" target="_blank" class="project-btn"> View Project </a>
+          </div>
+          <!-- ROBOT SOCCER -->
+          <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+            <img src="/img/soccer.jpg" alt="Robot Soccer ESP32" />
+            <h3>Robot Soccer ESP32</h3>
+            <p>Robot sepak bola sederhana berbasis ESP32 yang dikendalikan melalui Bluetooth dengan motor DC untuk pergerakan dan servo untuk mekanisme tendangan.</p>
+            <a href="https://github.com/ourbingss/Robot_Soccer_ESP32" target="_blank" class="project-btn"> View Project </a>
+          </div>
+    </section>
     <section id="contact" class="contact-section">
       <div class="main-container" data-aos="fade-up" data-aos-duration="1000">
         <h2>Contact <span>Me</span></h2>
@@ -198,6 +142,9 @@
         </form>
       </div>
     </section>
+    <footer class="footer">
+    <p>&copy; 2026 <span>Ourbingss</span>. All Rights Reserved.</p>
+    </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
