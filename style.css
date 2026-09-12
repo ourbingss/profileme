@@ -672,23 +672,24 @@ h2 span {
    RESPONSIVE - TABLET
 ========================================= */
 
-/* =========================================
-   RESPONSIVE - TABLET & MOBILE
-========================================= */
-
 @media (max-width: 884px) {
+
+    /* Section */
+    section {
+        min-height: auto;
+        height: auto;
+    }
 
     body {
         overflow-y: visible;
     }
 
     /* Navbar */
-
     nav .logo {
         position: absolute;
         top: 16px;
         left: 15px;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .nav-container .links {
@@ -700,17 +701,19 @@ h2 span {
         display: block;
     }
 
-
     /* Main */
-
     .main-container {
         display: flex;
         flex-direction: column;
+        min-height: auto;
+        height: auto;
+        padding-top: 70px;
+        padding-bottom: 15px;
     }
 
     .main-container .image {
-        width: 55%;
-        max-width: 220px;
+        width: 50%;
+        max-width: 300px;
         margin-bottom: 15px;
         z-index: 0;
     }
@@ -721,55 +724,29 @@ h2 span {
     }
 
     .main-container .content {
-        width: 85%;
+        width: 80%;
         text-align: center;
     }
 
-
-    /* Font Main */
-
-    .content h1 {
-        font-size: 2rem;
-    }
-
-    .content .typewriter {
-        font-size: 1.1rem;
-    }
-
-    .content .typewriter span {
-        font-size: 1.5rem;
-    }
-
-    .content .quotes {
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-
-
-    /* Social Media */
-
+    /* Social */
     .social-links i {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1.1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
         margin: 4px 5px;
     }
 
-
     /* Mobile Sections */
-
     .about-section,
     .skills-section,
     .projects-section,
     .contact-section {
         min-height: auto;
         height: auto;
-        padding: 3rem 5%;
+        padding: 2rem 5%;
     }
 
-
     /* About */
-
     .about-wrapper {
         flex-direction: column;
         gap: 2rem;
@@ -786,18 +763,15 @@ h2 span {
 
     .about-content h2 {
         text-align: center;
+        margin-top: 0;
     }
 
-
     /* Contact */
-
     .contact-form .input-box input {
         width: 100%;
     }
 
-
     /* Cancel Button */
-
     .cancel {
         color: white;
     }
@@ -805,22 +779,24 @@ h2 span {
 
 
 /* =========================================
-   MOBILE - SMALL SCREEN
+   MUSIC CARD - MOBILE
 ========================================= */
 
 @media (max-width: 480px) {
 
     /* Section */
-
-    .about-section,
-    .skills-section,
-    .projects-section,
-    .contact-section {
-        padding: 3rem 5%;
+    section {
+        min-height: auto;
+        height: auto;
     }
 
-
-    /* Main Image */
+    /* Main */
+    .main-container {
+        min-height: auto;
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 10px;
+    }
 
     .main-container .image {
         width: 50%;
@@ -828,9 +804,12 @@ h2 span {
         margin-bottom: 12px;
     }
 
+    .main-container .content {
+        width: 85%;
+        text-align: center;
+    }
 
-    /* Main Font */
-
+    /* Text */
     .content h1 {
         font-size: 1.7rem;
     }
@@ -846,11 +825,10 @@ h2 span {
     .content .quotes {
         font-size: 0.8rem;
         line-height: 1.5;
+        margin: 6px 0;
     }
 
-
-    /* Social Media */
-
+    /* Social */
     .social-links i {
         width: 1.8rem;
         height: 1.8rem;
@@ -858,9 +836,44 @@ h2 span {
         margin: 3px 4px;
     }
 
+    /* Sections */
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+        min-height: auto;
+        height: auto;
+        padding: 1.5rem 5%;
+    }
+
+/* About */
+.about-content h2 {
+    font-size: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Projects */
+.projects-section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card h3 {
+    font-size: 0.95rem;
+}
+
+.project-card p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
 
     /* Music Card */
-
     .music-card {
         width: 90%;
         max-width: 380px;
