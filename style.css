@@ -784,57 +784,64 @@ h2 span {
 
 @media (max-width: 480px) {
 
-    /* Section */
-    section {
-        min-height: auto;
-        height: auto;
-    }
-
-    /* Main */
     .main-container {
-        min-height: auto;
+        min-height: calc(10vh - 60px);
         height: auto;
-        padding-top: 60px;
+        padding-top: 50px;
         padding-bottom: 10px;
+        justify-content: center;
     }
 
+
+    /* FOTO */
     .main-container .image {
-        width: 50%;
-        max-width: 190px;
-        margin-bottom: 12px;
+        width: 55%;
+        max-width: 220px;
+        margin-bottom: 14px;
     }
 
+    /* AREA TEKS */
     .main-container .content {
-        width: 85%;
+        width: 80%;
         text-align: center;
     }
 
-    /* Text */
+    /* Hi, I'm... */
     .content h1 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
+        margin-bottom: 5px;
     }
 
+    /* I'm a... */
     .content .typewriter {
-        font-size: 0.95rem;
-    }
-
-    .content .typewriter span {
-        font-size: 1.3rem;
-    }
-
-    .content .quotes {
-        font-size: 0.8rem;
-        line-height: 1.5;
-        margin: 6px 0;
-    }
-
-    /* Social */
-    .social-links i {
-        width: 1.8rem;
-        height: 1.8rem;
         font-size: 1rem;
-        margin: 3px 4px;
+        line-height: 1.3;
     }
+
+    /* Tulisan Programmer / Gamers / Prettier */
+    .content .typewriter span {
+        font-size: 1.5rem;
+    }
+
+    /* QUOTES */
+    .content .quotes {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 30px 0 12px;
+    }
+
+    /* SOCIAL LINKS */
+    .social-links {
+        margin-top: 30px;
+    }
+
+    .social-links i {
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: 1.1rem;
+        margin: 3px 5px;
+    }
+}
 
     /* Sections */
     .about-section,
@@ -854,8 +861,9 @@ h2 span {
 }
 
 .about-content p {
-    font-size: 0.85rem;
-    line-height: 1.6;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 30px 0 12px;
 }
 
 /* Projects */
@@ -865,17 +873,17 @@ h2 span {
 }
 
 .project-card h3 {
-    font-size: 0.95rem;
+    font-size: 1.25rem;
 }
 
 .project-card p {
-    font-size: 0.75rem;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
     /* Music Card */
     .music-card {
-        width: 90%;
+        width: 100%;
         max-width: 380px;
         min-height: 120px;
         padding: 0.8rem;
@@ -915,13 +923,6 @@ h2 span {
     .singer-name {
         font-size: 0.7rem;
     }
-
-    .heart-icon {
-        font-size: 0.9rem;
-        flex-shrink: 0;
-        margin-left: 5px;
-    }
-
     .progress-box input[type="range"] {
         height: 3px;
     }
@@ -949,9 +950,10 @@ h2 span {
     }
 
     .sound-wave span {
+        background: #800e13;
         width: 2px;
     }
-}
+
 /* =========================================
    FOOTER SECTION
 ========================================= */
