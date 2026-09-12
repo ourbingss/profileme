@@ -672,6 +672,10 @@ h2 span {
    RESPONSIVE - TABLET
 ========================================= */
 
+/* =========================================
+   RESPONSIVE - TABLET & MOBILE
+========================================= */
+
 @media (max-width: 884px) {
 
     body {
@@ -684,7 +688,7 @@ h2 span {
         position: absolute;
         top: 16px;
         left: 15px;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .nav-container .links {
@@ -696,6 +700,7 @@ h2 span {
         display: block;
     }
 
+
     /* Main */
 
     .main-container {
@@ -704,9 +709,9 @@ h2 span {
     }
 
     .main-container .image {
-        width: 70%;
-        max-width: 300px;
-        margin-bottom: 20px;
+        width: 55%;
+        max-width: 220px;
+        margin-bottom: 15px;
         z-index: 0;
     }
 
@@ -716,27 +721,52 @@ h2 span {
     }
 
     .main-container .content {
-        width: 80%;
+        width: 85%;
+        text-align: center;
     }
 
-    /* Social */
 
-    .social-links i {
-        width: 2.5rem;
-        height: 2.5rem;
+    /* Font Main */
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content .typewriter {
+        font-size: 1.1rem;
+    }
+
+    .content .typewriter span {
         font-size: 1.5rem;
     }
 
+    .content .quotes {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+
+    /* Social Media */
+
+    .social-links i {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.1rem;
+        margin: 4px 5px;
+    }
+
+
     /* Mobile Sections */
 
-.about-section,
-.skills-section,
-.projects-section,
-.contact-section {
-    min-height: auto;
-    height: auto;
-    padding: 3.5rem 5%;
-}
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+        min-height: auto;
+        height: auto;
+        padding: 3rem 5%;
+    }
+
 
     /* About */
 
@@ -758,11 +788,13 @@ h2 span {
         text-align: center;
     }
 
+
     /* Contact */
 
     .contact-form .input-box input {
         width: 100%;
     }
+
 
     /* Cancel Button */
 
@@ -771,18 +803,64 @@ h2 span {
     }
 }
 
+
 /* =========================================
-   MUSIC CARD - MOBILE
+   MOBILE - SMALL SCREEN
 ========================================= */
 
 @media (max-width: 480px) {
+
+    /* Section */
 
     .about-section,
     .skills-section,
     .projects-section,
     .contact-section {
-        padding: 4rem 5%;
+        padding: 3rem 5%;
     }
+
+
+    /* Main Image */
+
+    .main-container .image {
+        width: 50%;
+        max-width: 190px;
+        margin-bottom: 12px;
+    }
+
+
+    /* Main Font */
+
+    .content h1 {
+        font-size: 1.7rem;
+    }
+
+    .content .typewriter {
+        font-size: 0.95rem;
+    }
+
+    .content .typewriter span {
+        font-size: 1.3rem;
+    }
+
+    .content .quotes {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+
+    /* Social Media */
+
+    .social-links i {
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1rem;
+        margin: 3px 4px;
+    }
+
+
+    /* Music Card */
+
     .music-card {
         width: 90%;
         max-width: 380px;
